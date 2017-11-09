@@ -241,6 +241,8 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+build.xml
+manifest.mf
 
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
