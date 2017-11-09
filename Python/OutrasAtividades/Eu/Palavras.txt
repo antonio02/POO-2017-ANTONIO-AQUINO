@@ -1,0 +1,3 @@
+Computador$Objeto
+Abacate$Fruta
+Livro$Objeto
