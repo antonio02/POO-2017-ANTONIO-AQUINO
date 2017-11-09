@@ -10,7 +10,9 @@ public class App {
         Elevador elevador = new Elevador(10, 5);
         String opcao = "";
         String mensagem = "";
+        
         while (!opcao.equals("0")){
+            
             opcao = JOptionPane.showInputDialog("subir/descer/sair/entrar");
             if (opcao.equals("subir")) {
                 mensagem = elevador.subir();
@@ -23,6 +25,7 @@ public class App {
             } else {
                 mensagem = "nada";
             }
+            
             JOptionPane.showMessageDialog(null, mensagem);
 
         }

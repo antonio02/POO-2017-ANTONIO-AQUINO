@@ -8,13 +8,16 @@ public class Elevador {
     private int qtdPessoas;
 
     public Elevador(int andares, int capacidade) {
+        
         setAndares(andares);
         setCapacidade(capacidade);
         setAndarAtual(0);
         setQtdPessoas(0);
+        
     }
     
     public String entrar(){
+        
         if (getQtdPessoas() < getCapacidade()) {
             setQtdPessoas(getQtdPessoas() +1);
             return "Uma pessoa adicionada! ("+getQtdPessoas()+"/"+getCapacidade()+")";
@@ -24,6 +27,7 @@ public class Elevador {
     }
     
     public String sair(){
+        
         if (getQtdPessoas() <= 0) {
             return "O elevador esta vazio! ("+getQtdPessoas()+"/"+getCapacidade()+")";
         } else {
@@ -33,6 +37,7 @@ public class Elevador {
     }
     
     public String subir(){
+        
         if (getAndarAtual() < getAndares()) {
             setAndarAtual(getAndarAtual()+1);
             return "Subindo um andar! ("+getAndarAtual()+"/"+getAndares()+")";
@@ -42,6 +47,7 @@ public class Elevador {
     }
     
     public String descer(){
+        
         if (getAndarAtual() <= 0) {
             return "Elevador já esta no terreo! ("+getAndarAtual()+"/"+getAndares()+")";
         } else {
