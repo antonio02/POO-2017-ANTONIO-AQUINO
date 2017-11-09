@@ -1,0 +1,36 @@
+
+package apartamentoproprietario;
+
+class Proprietario {
+    
+    private String nome;
+    private final String cpf;
+    private String rg;
+
+    public Proprietario(String nome, String cpf, String rg) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.rg = rg;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+    
+}
