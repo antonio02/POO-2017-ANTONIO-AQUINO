@@ -1,0 +1,30 @@
+LETRA A:
+
+ A programação estruturada possui a desvantagem em relação a programação orientada
+a objetos, pois a programação orientada a objetos possui a possibilidade de reuso
+de varias partes do codigo e tambem da modificação do mesmo sem prejudicar o resto
+do projeto.
+
+LETRA B:
+
+ Classe:
+	Uma classe é onde são colocadas os atributos e comportamentos de um objeto.
+ Objeto:
+	Um objeto é um instanciação de uma classe, é a classe em seu funcionamento.
+ Variavel:
+	Uma variavel dentro do objeto é chamada de atributos que mostram o estado
+ atual do objeto quando instanciado.
+ Instancia:
+	Uma instanciação é a criação de um objeto por meio de classe.
+
+LETRA C:
+
+ Estado de um objeto:
+	O estado de um objeto é dado pelos valores atuais de seus atributos.
+ Membros de um objetos:
+	Os membros de um objetos são os seus atributos (variaveis) e os seus com-
+ portamentos (metodos).
+ O papel de um objeto:
+	É facilitar a criação de um codigo por meio da observação do mundo real onde
+ você pode criar algo no codigo com a simples observação dos seus estados e comportamentos.
+	
