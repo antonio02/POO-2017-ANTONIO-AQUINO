@@ -1,6 +1,7 @@
 
 package app;
 
+import javax.swing.JOptionPane;
 import model.Data;
 import model.Funcionario;
 
@@ -14,10 +15,10 @@ public class App {
         Funcionario fun = new Funcionario("Antonio", "Analista", 900, "3652733", data);
         
         fun.demitir(data2);
-        System.out.println(fun.funcionarioString());
+        JOptionPane.showMessageDialog(null, fun.funcionarioString());
         
         fun.recontratar("Limpeza", 500,data3);
-        System.out.println(fun.funcionarioString());
+        JOptionPane.showMessageDialog(null, fun.funcionarioString());
     }
     
 }
