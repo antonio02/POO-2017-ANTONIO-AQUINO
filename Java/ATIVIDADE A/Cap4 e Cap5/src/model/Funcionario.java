@@ -48,7 +48,7 @@ public class Funcionario {
                 "\nData adimissão: " + dataAdmissao.dataString() +
                 "\nData demissao: "+ 
                 ((contratado)?"Ainda contratado":dataDemissao.dataString())+
-                "\nEsta contratado: " + ((contratado)?"sim":"não");
+                "\nEsta contratado: " + ((contratado)?"sim\n":"não\n");
     }
 
     public String getNome() {
