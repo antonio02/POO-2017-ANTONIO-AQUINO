@@ -1,0 +1,11 @@
+2) Um método que recebe uma referência de uma Conta poderá receber qualquer classe herdada de Conta. 
+
+5) Não, como ContaCorrente não é abstrata ela obrigatoriamente deve implementar o método abstrato. 
+
+6) Para que as subclasses não-abstratas sejam obrigadas a ter aquele método implementado da sua forma. Nada irá acontecer, mas aquele método não fara parte da família e sim daquela classe. 
+
+7) Sim. Pois esse método será implementado nas classes concretas que herdarem de Funcionário. 
+
+Desafios 
+
+1) É possível dar um new Conta[10] pois um array de Conta não contém objetos Conta e sim referencias para eles. 
