@@ -1,0 +1,7 @@
+1 - Não. Pois uma classe abstrata pode não ter todos os seus metodos implementados o que em tempo de execução resultaria em um erro.
+
+2 - O metodo imprimaAlgo precisa ser implementado.
+
+3 - Se a classe que herdou não for abstrata ocorrera um erro, pois uma classe concreta precisa ter todos os seus metodos implementados.
+
+7 - A criação de um array apenas cria referencias e não objetos da classe.
