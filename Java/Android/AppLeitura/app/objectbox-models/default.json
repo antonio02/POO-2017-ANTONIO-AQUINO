@@ -1,0 +1,173 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:2025399024077775376",
+      "lastPropertyId": "8:4069519390027905953",
+      "name": "Usuario",
+      "properties": [
+        {
+          "id": "1:5747660390588740037",
+          "name": "id"
+        },
+        {
+          "id": "3:6974344035264813549",
+          "name": "nome"
+        },
+        {
+          "id": "4:8631301186366459645",
+          "name": "senha"
+        },
+        {
+          "id": "5:8253559561379214498",
+          "name": "nomeDeUsuario"
+        },
+        {
+          "id": "7:4283929802459116250",
+          "name": "dataDeNascimento"
+        },
+        {
+          "id": "8:4069519390027905953",
+          "name": "keeplogado"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:3529664023663232972",
+      "lastPropertyId": "4:5037119028310092854",
+      "name": "Logavel",
+      "properties": [
+        {
+          "id": "1:4899125644588249305",
+          "name": "id"
+        },
+        {
+          "id": "2:626999112904613283",
+          "name": "nomeDeUsuario"
+        },
+        {
+          "id": "3:2064971734961198122",
+          "name": "keeplogado"
+        },
+        {
+          "id": "4:5037119028310092854",
+          "name": "senha"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:332004166635817937",
+      "lastPropertyId": "12:2688057498374740804",
+      "name": "Livro",
+      "properties": [
+        {
+          "id": "1:8043309914291230669",
+          "name": "id"
+        },
+        {
+          "id": "2:6413319668398372989",
+          "name": "nome"
+        },
+        {
+          "id": "3:3591496630327203672",
+          "indexId": "1:1881309032142213210",
+          "name": "donoId"
+        },
+        {
+          "id": "4:4396614430873768219",
+          "name": "autor"
+        },
+        {
+          "id": "5:8401700690229653365",
+          "name": "ano"
+        },
+        {
+          "id": "6:7884771587076645897",
+          "name": "totalPaginas"
+        },
+        {
+          "id": "7:4285900245244777573",
+          "name": "paginasLidas"
+        },
+        {
+          "id": "8:4764400848607353385",
+          "name": "avaliacao"
+        },
+        {
+          "id": "9:2395511006781867706",
+          "name": "statusLeitura"
+        },
+        {
+          "id": "10:7426032027717548596",
+          "name": "errors"
+        },
+        {
+          "id": "11:4196520861027476440",
+          "indexId": "2:8707501219831311020",
+          "name": "dataInicioId"
+        },
+        {
+          "id": "12:2688057498374740804",
+          "indexId": "3:164845954998742339",
+          "name": "dataTerminoId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:199450819195882346",
+      "lastPropertyId": "4:8612214643834131223",
+      "name": "Data",
+      "properties": [
+        {
+          "id": "1:8919161774962143733",
+          "name": "id"
+        },
+        {
+          "id": "2:7675986730188449303",
+          "name": "dia"
+        },
+        {
+          "id": "3:8429036823069343996",
+          "name": "mes"
+        },
+        {
+          "id": "4:8612214643834131223",
+          "name": "ano"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "6:1280388070122766520",
+  "lastIndexId": "3:164845954998742339",
+  "lastRelationId": "1:3222512674289628869",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [
+    1297057514913428450,
+    1280388070122766520
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    7639413273611180595,
+    6755710105304245683,
+    6399970648295194813,
+    8909704918095288978,
+    2551962261327934059,
+    6771960954386087885,
+    882714518465779714,
+    8791562267283690314,
+    6915312791187177532,
+    684236504178639334
+  ],
+  "retiredRelationUids": [
+    3222512674289628869
+  ],
+  "version": 1
+}

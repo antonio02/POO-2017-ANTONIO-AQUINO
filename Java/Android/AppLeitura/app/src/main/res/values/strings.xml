@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">AppLeitura</string>
+    <string name="login_click_nao_cadastrado"><u>Não está cadastrado?</u></string>
+    <string name="login_edtxt_hint_usuario">Usuario</string>
+    <string name="login_edtxt_hint_senha">Senha</string>
+    <string name="login_txt_conectado">Mantenha-me conectado</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_img_description">AppImagem</string>
+    <string name="cadastro_edtxt_nome">Nome</string>
+    <string name="cadastro_edtxt_confirme_senha">Confirme a senha</string>
+    <string name="cadastro_edtxt_data_nascimento">Data de nascimento</string>
+    <string name="cadastro_btn_cadastrar">Finalizar</string>
+    <string name="cadastro_btn_cancelar">Cancelar</string>
+    <string name="cadastro_error_txtStatus_espaco_senha">Sem espaços na senha</string>
+    <string name="cadastro_error_txtStatus_senha_grande">Senha muito grande</string>
+    <string name="cadastro_error_txtStatus_nome_apenasLetras">Digite apenas letras</string>
+    <string name="cadastro_error_txtStatus_muitos_espacos">Muitos espaços</string>
+    <string name="cadastro_error_txtStatus_nome_grande">Nome muito grande</string>
+    <string name="cadastro_error_txtStatus_apenasLetrasNumeros">Digite apenas letras ou numeros</string>
+    <string name="cadastro_error_txtStatus_nomeUsuarioGrande">Nome de usuario muito grande</string>
+    <string name="cadastro_error_txtStatus_semDataNascimento">Coloque a data de nascimento</string>
+    <string name="cadastro_error_txtStatus_senhasDiferentes">As senhas não são iguais</string>
+    <string name="cadastro_error_txtStatus_senhaPequena">Senha muito pequena</string>
+    <string name="cadastro_error_txtStatus_nomePequeno">Nome muito pequeno</string>
+    <string name="cadastro_error_txtStatus_usuarioPequeno">Nome de usuario muito pequeno</string>
+    <string name="cadastro_error_txtStatus_usuarioJaCadastrado">Nome de usuario já cadastrado</string>
+    <string name="login_error_senhaIncorreta">Senha incorreta</string>
+    <string name="login_error_usuarioNaoEncontrado">Usuario não encontrado</string>
+    <string name="cadastro_error_txtstatus_dataMuitoNovo">Você é do futuro?</string>
+    <string name="cadastro_error_txtstatus_dataNascimentoInvalida">Coloque uma data de nascimento valida</string>
+    <string name="cv_txt_InicioLeitura">Início da Leitura:</string>
+    <string name="cv_txt_FimLeitura">Fim da leitura:</string>
+    <string name="livroform_txtAsterisco">*</string>
+    <string name="livroform_edtxt_nomeLivro">Nome do Livro</string>
+    <string name="livroform_edtxt_autorLivro">Autor do Livro</string>
+    <string name="livroform_edtxt_anoLivro">Ano de publicação</string>
+    <string name="livroform_edtxt_inicioLeitura">Data de início da leitura</string>
+    <string name="livroform_edtxt_fimLeitura">Data de termino da leitura</string>
+    <string name="livroform_edtxt_avaliacao">Avaliação</string>
+    <string name="livroform_edtxt_statusLeitura">Status da Leitura</string>
+    <string name="livroform_txt_paginas">Páginas</string>
+    <string name="livroform_edtxt_paginasLidas">Lidas</string>
+    <string name="livroform_edtxt_paginasTotal">Total</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

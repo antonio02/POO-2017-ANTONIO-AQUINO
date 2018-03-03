@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeNoABFullscreen" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppFragmentTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@android:color/holo_blue_light</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="DateDialogTheme" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/DatePickerSpinner</item>
+    </style>
+
+    <style name="DatePickerSpinner" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+</resources>

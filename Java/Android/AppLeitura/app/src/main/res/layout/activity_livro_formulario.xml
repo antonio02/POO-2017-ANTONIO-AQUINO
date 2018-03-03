@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.antonio.appleitura.FormularioLivro"
+    android:theme="@style/AppFragmentTheme"
+    android:background="#26AE90">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:background="#FFB73C"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/livroForm_txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_red_dark"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/livroform_txtAsterisco"
+            android:textSize="20sp"
+            android:layout_gravity="end"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <EditText
+            android:id="@+id/livroForm_edtxt_nome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:hint="@string/livroform_edtxt_nomeLivro"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:background="@android:color/transparent"
+            android:textColor="@color/livroform_edtxt_text_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:longClickable="false"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/livroform_txtAsterisco"
+            android:textSize="20sp"
+            android:layout_gravity="end"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <EditText
+            android:id="@+id/livroForm_edtxt_autor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:hint="@string/livroform_edtxt_autorLivro"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/livroform_edtxt_text_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:longClickable="false"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/livroform_txtAsterisco"
+            android:textSize="20sp"
+            android:layout_gravity="end"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <EditText
+            android:id="@+id/livroForm_edtxt_ano"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:hint="@string/livroform_edtxt_anoLivro"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:onClick="getAnoPublicacao"
+            android:focusable="false"
+            android:background="@android:color/transparent"
+            android:textColor="@color/livroform_edtxt_text_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:longClickable="false"/>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center"
+            android:background="@drawable/livroform_clear_button"
+            android:onClick="clearDataInicio"/>
+
+        <EditText
+            android:id="@+id/livroForm_edtxt_data_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:hint="@string/livroform_edtxt_inicioLeitura"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:onClick="getDataInicio"
+            android:background="@android:color/transparent"
+            android:textColor="@color/livroform_edtxt_text_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:longClickable="false"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center"
+            android:background="@drawable/livroform_clear_button"
+            android:onClick="clearDataTermino"/>
+
+        <EditText
+            android:id="@+id/livroForm_edtxt_data_termino"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:hint="@string/livroform_edtxt_fimLeitura"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:onClick="getDataTermino"
+            android:background="@android:color/transparent"
+            android:textColor="@color/livroform_edtxt_text_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:longClickable="false"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/livroForm_edtxt_avaliacao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:hint="@string/livroform_edtxt_avaliacao"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:background="@android:color/transparent"
+            android:textColor="@color/livroform_edtxt_text_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:longClickable="false"
+            android:onClick="popupAvaliacao"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/livroform_txtAsterisco"
+            android:textSize="20sp"
+            android:layout_gravity="end"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <EditText
+            android:id="@+id/livroForm_edtxt_statusLeitura"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:hint="@string/livroform_edtxt_statusLeitura"
+            android:textSize="20sp"
+            android:focusable="false"
+            android:onClick="popupStatusLeitura"
+            android:background="@android:color/transparent"
+            android:textColor="@color/livroform_edtxt_text_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:longClickable="false"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/livroform_txt_paginas"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:background="@android:color/white">
+
+            <EditText
+                android:id="@+id/livroForm_edtxt_paginasLidas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:hint="@string/livroform_edtxt_paginasLidas"
+                android:textSize="20sp"
+                android:onClick="getPaginasLidas"
+                android:focusable="false"
+                android:background="@android:color/transparent"
+                android:textColor="@color/livroform_edtxt_text_color"
+                android:textColorHint="@android:color/darker_gray"
+                android:longClickable="false"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/livroform_txtAsterisco"
+                android:textSize="20sp"
+                android:layout_gravity="end"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@android:color/holo_red_light"/>
+
+            <EditText
+                android:id="@+id/livroForm_edtxt_totalPaginas"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:hint="@string/livroform_edtxt_paginasTotal"
+                android:textSize="20sp"
+                android:onClick="getTotalPaginas"
+                android:focusable="false"
+                android:background="@android:color/transparent"
+                android:textColor="@color/livroform_edtxt_text_color"
+                android:textColorHint="@android:color/darker_gray"
+                android:longClickable="false"/>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="@dimen/livroform_distance_views"
+        android:layout_marginEnd="26dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="@string/cadastro_btn_cancelar"
+            android:layout_marginEnd="3dp"
+            android:backgroundTint="#D6D7D7"
+            android:textColor="#26AE90"
+            android:onClick="cancelar"/>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="@string/cadastro_btn_cadastrar"
+            android:layout_marginStart="3dp"
+            android:backgroundTint="#D6D7D7"
+            android:textColor="#26AE90"
+            android:onClick="finalizar"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
