@@ -2,47 +2,37 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#26AE90"
-    tools:context="com.antonio.appleitura.ActivityInicio">
+    tools:context=".ActivityCapitulos">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/inicio_toolbar"
+        android:id="@+id/capitulos_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#059830"
         android:elevation="4dp" />
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/inicio_tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="4dp"
-        android:background="#059830"
-        app:tabMode="fixed"
-        app:tabGravity="fill" />
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/inicio_viewpager"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/capitulos_rv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:theme="@style/AppFragmentTheme"/>
 
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_gravity="bottom|end"
-            android:onClick="novoLivro"
+            android:onClick="novoCapitulo"
             android:src="@drawable/fab_adicionar"/>
 
     </FrameLayout>
-
 
 </LinearLayout>

@@ -1,17 +1,9 @@
 package modelos;
 
-import android.database.DataSetObservable;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import io.objectbox.annotation.Backlink;
-import io.objectbox.annotation.Convert;
 import io.objectbox.annotation.Entity;
-import io.objectbox.annotation.Id;
-import io.objectbox.annotation.Transient;
-import io.objectbox.converter.PropertyConverter;
-import io.objectbox.reactive.DataObserver;
 import io.objectbox.relation.ToMany;
 
 
@@ -35,7 +27,7 @@ public class Usuario extends Logavel{
         return nome;
     }
 
-    public String getDataDeNascimento() {
+    String getDataDeNascimento() {
         return dataDeNascimento;
     }
 

@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import adapters.LivroRvAdapter;
+import adapters.RvAdapterLivros;
 import modelos.App;
 import modelos.Usuario;
 
@@ -32,9 +32,9 @@ public class FragmentoLivro extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saved) {
         View v = inflater.inflate(R.layout.fragment_livro, container, false);
         RecyclerView rv = v.findViewById(R.id.fragment_rv_livros);
-        LivroRvAdapter adapter = new LivroRvAdapter(
+        RvAdapterLivros adapter = new RvAdapterLivros(
                 ((App)getActivity().getApplication()).getBoxStore().boxFor(Usuario.class),
-                ((Inicio) getActivity()).getUserId(), getArguments().getString("tipo"),
+                ((ActivityInicio) getActivity()).getUserId(), getArguments().getString("tipo"),
                 getFragmentManager());
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -9,15 +9,11 @@ import com.antonio.appleitura.FragmentoLivro;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by antonio on 16/02/18.
- */
-
-public class LivroFragAdapter extends FragmentPagerAdapter {
+public class FragAdapterLivro extends FragmentPagerAdapter {
 
     private List<String> tabs = new ArrayList<>();
 
-    public LivroFragAdapter(FragmentManager fm) {
+    public FragAdapterLivro(FragmentManager fm) {
         super(fm);
     }
 

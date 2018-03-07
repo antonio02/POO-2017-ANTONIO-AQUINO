@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import io.objectbox.annotation.Backlink;
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
+import io.objectbox.relation.ToMany;
 import io.objectbox.relation.ToOne;
 
-/**
- * Created by antonio on 12/02/18.
- */
+
 @Entity
 public class Livro {
 
@@ -23,6 +23,8 @@ public class Livro {
     private int paginasLidas;
     private String avaliacao;
     private String statusLeitura;
+    @Backlink
+    public ToMany<Capitulo> capitulos;
     ToOne<Data> dataInicio;
     ToOne<Data> dataTermino;
     private String errors;
@@ -99,7 +101,7 @@ public class Livro {
                 return false;
             }
         } else {
-            this.errors = "Data de Inicio não colocada";
+            this.errors = "Data de ActivityInicio não colocada";
             return false;
         }
     }
@@ -126,19 +128,6 @@ public class Livro {
             this.errors = "Data invalida";
             return false;
         }
-    }
-
-    public boolean setPaginasLidas(int paginasLidas) {
-        if (paginasLidas > totalPaginas) {
-            this.errors = "Numero maior que o total de paginas";
-            return false;
-        } else if (totalPaginas < 0) {
-            this.errors = "O número de paginas não pode ser negativo";
-            return false;
-        }
-        this.paginasLidas = paginasLidas;
-        return true;
-
     }
 
     public String getNome() {

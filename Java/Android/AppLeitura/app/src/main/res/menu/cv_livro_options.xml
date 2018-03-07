@@ -3,10 +3,14 @@
 
     <item
         android:id="@+id/menu_cv_livro_option_editar"
-        android:title="Editar"/>
+        android:title="@string/menu_editar"/>
 
     <item
         android:id="@+id/menu_cv_livro_option_detalhes"
-        android:title="Detalhes"/>
+        android:title="@string/menu_detalhes"/>
+
+    <item
+        android:id="@+id/menu_cv_livro_option_excluir"
+        android:title="@string/menu_excluir"/>
 
 </menu>

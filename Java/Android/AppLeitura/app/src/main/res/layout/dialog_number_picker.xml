@@ -9,7 +9,7 @@
         android:id="@+id/dialog_btnMenos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="-100"/>
+        android:text="@string/dialog_number_menos_100"/>
 
     <NumberPicker
         android:id="@+id/dialog_numPicker"
@@ -20,7 +20,7 @@
         android:id="@+id/dialog_btnMais"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="+100"/>
+        android:text="@string/dialog_number_mais_100"/>
 
 
 </LinearLayout>

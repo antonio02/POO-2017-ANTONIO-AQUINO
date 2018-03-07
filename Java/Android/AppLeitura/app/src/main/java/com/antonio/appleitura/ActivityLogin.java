@@ -20,7 +20,7 @@ import modelos.Logavel;
 import modelos.Usuario;
 import modelos.Usuario_;
 
-public class Login extends AppCompatActivity {
+public class ActivityLogin extends AppCompatActivity {
 
     TextView txtStatus;
     EditText edtxtUsuario;
@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
     }
 
     private void callInicio() {
-        Intent it = new Intent(this, Inicio.class);
+        Intent it = new Intent(this, ActivityInicio.class);
         it.putExtra("userid", logado.getAll().get(0).getId());
         startActivity(it);
         finish();

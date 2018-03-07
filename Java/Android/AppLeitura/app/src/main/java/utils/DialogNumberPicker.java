@@ -11,25 +11,20 @@ import android.widget.NumberPicker;
 
 import com.antonio.appleitura.R;
 
-import java.util.Calendar;
 
-/**
- * Created by antonio on 15/02/18.
- */
-
-public class NumberPickerDialog extends DialogFragment {
+public class DialogNumberPicker extends DialogFragment {
 
     private NumberPicker num;
     private Button bMais;
     private Button bMenos;
 
-    public static NumberPickerDialog newInstance(int maxValue, int minValue, int atual, String tag) {
+    public static DialogNumberPicker newInstance(int maxValue, int minValue, int atual, String tag) {
         Bundle args = new Bundle();
         args.putInt("maxvalue", maxValue);
         args.putInt("minvalue", minValue);
         args.putInt("atualvalue", atual);
         args.putString("tag", tag);
-        NumberPickerDialog fragment = new NumberPickerDialog();
+        DialogNumberPicker fragment = new DialogNumberPicker();
         fragment.setArguments(args);
         return fragment;
     }

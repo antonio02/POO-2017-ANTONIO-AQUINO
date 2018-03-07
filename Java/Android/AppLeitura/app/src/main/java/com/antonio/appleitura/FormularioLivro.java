@@ -7,15 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.Calendar;
 import java.util.List;
 import io.objectbox.Box;
@@ -23,7 +20,7 @@ import modelos.App;
 import modelos.Data;
 import modelos.Livro;
 import modelos.Usuario;
-import utils.NumberPickerDialog;
+import utils.DialogNumberPicker;
 
 public class FormularioLivro extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, NumberPicker.OnValueChangeListener {
 
@@ -149,7 +146,7 @@ public class FormularioLivro extends AppCompatActivity implements DatePickerDial
                 }
 
                 if(charSequence.length() > 50){
-                    txtStatus.setText("Nome do livro muito grande");
+                    txtStatus.setText(R.string.livro_nome_grande);
                     edtxtNomeLivro.setText(texto);
                     return;
                 }
@@ -243,7 +240,7 @@ public class FormularioLivro extends AppCompatActivity implements DatePickerDial
     public void getPaginasLidas(View view) {
 
         if(getEdTxtString(edtxtInicioLeitura).isEmpty()){
-            txtStatus.setText("Você ainda não iniciou a leitura");
+            txtStatus.setText(R.string.livro_leitura_nao_iniciada);
             return;
         }
 
@@ -258,12 +255,12 @@ public class FormularioLivro extends AppCompatActivity implements DatePickerDial
                         "paginaslidas");
                 clearStatus();
             } else {
-                txtStatus.setText("Você já leu este livro");
+                txtStatus.setText(R.string.livro_jaLido);
                 setCenterText(edtxtPaginasLidas, getEdTxtString(edtxtTotalPaginas));
             }
 
         } else {
-            txtStatus.setText("Total de paginas vazio");
+            txtStatus.setText(R.string.livro_paginas_vazio);
         }
     }
 
@@ -284,13 +281,10 @@ public class FormularioLivro extends AppCompatActivity implements DatePickerDial
         popup.getMenu().add("Muito longo");
         popup.getMenu().add("Chato");
         popup.getMenu().add("Sem graça");
-        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-                edtxtAvaliacao.setText(menuItem.getTitle());
-                edtxtAvaliacao.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                return false;
-            }
+        popup.setOnMenuItemClickListener(menuItem -> {
+            edtxtAvaliacao.setText(menuItem.getTitle());
+            edtxtAvaliacao.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            return false;
         });
         popup.show();
     }
@@ -332,7 +326,7 @@ public class FormularioLivro extends AppCompatActivity implements DatePickerDial
     }
 
     private void showNumberDialog(int i, int i1, int i2, String tag) {
-        NumberPickerDialog num = NumberPickerDialog.newInstance(i,i1,i2,tag);
+        DialogNumberPicker num = DialogNumberPicker.newInstance(i,i1,i2,tag);
         num.setStyle(DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Material_Dialog);
         num.show(getFragmentManager(), "");
     }
@@ -403,7 +397,7 @@ public class FormularioLivro extends AppCompatActivity implements DatePickerDial
     private boolean checarLivroJaCadastrado(Usuario user) {
         for (Livro l : user.livros) {
             if (l.getNome().equalsIgnoreCase(edtxtNomeLivro.getText().toString().trim())) {
-                txtStatus.setText("Já existe um livro com o mesmo nome");
+                txtStatus.setText(R.string.error_livro_jaExiste);
                 return true;
             }
         }
@@ -412,27 +406,27 @@ public class FormularioLivro extends AppCompatActivity implements DatePickerDial
 
     private boolean checarCampos() {
         if(getEdTxtString(edtxtNomeLivro).length() < 3){
-            txtStatus.setText("Nome do livro muito curto ou vazio");
+            txtStatus.setText(R.string.erro_livro_nome_curto);
             return false;
         }
 
         if(getEdTxtString(edtxtAutorLivro).length() < 4){
-            txtStatus.setText("Nome do autor muito curto ou vazio");
+            txtStatus.setText(R.string.erro_livro_autor_curto);
             return false;
         }
 
         if(getEdTxtString(edtxtAnoLivro).isEmpty()){
-            txtStatus.setText("Ano de publicação não pode ficar vazio");
+            txtStatus.setText(R.string.erro_livro_ano_vazio);
             return false;
         }
 
         if(getEdTxtString(edtxtstatusLeitura).isEmpty()){
-            txtStatus.setText("Status da leitura não pode ficar vazio");
+            txtStatus.setText(R.string.erro_livro_status_vazio);
             return false;
         }
 
         if(getEdTxtString(edtxtTotalPaginas).isEmpty()){
-            txtStatus.setText("Total de páginas não pode ficar vazio");
+            txtStatus.setText(R.string.erro_livro_paginas_total_vazio);
             return false;
         }
         return true;

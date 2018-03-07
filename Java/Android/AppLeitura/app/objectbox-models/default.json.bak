@@ -33,12 +33,7 @@
           "name": "keeplogado"
         }
       ],
-      "relations": [
-        {
-          "id": "1:3222512674289628869",
-          "name": "listeners"
-        }
-      ]
+      "relations": []
     },
     {
       "id": "3:3529664023663232972",
@@ -148,21 +143,40 @@
       "relations": []
     },
     {
-      "id": "6:1280388070122766520",
-      "lastPropertyId": "0:0",
-      "name": "OnUserChangeListener",
-      "properties": [],
+      "id": "7:2841487898884058921",
+      "lastPropertyId": "6:4305545972517075281",
+      "name": "Capitulo",
+      "properties": [
+        {
+          "id": "1:6884666002778190406",
+          "name": "id"
+        },
+        {
+          "id": "2:181165033309450309",
+          "name": "numero"
+        },
+        {
+          "id": "3:5174862446366252770",
+          "name": "nome"
+        },
+        {
+          "id": "6:4305545972517075281",
+          "indexId": "4:8135378176765199035",
+          "name": "livroId"
+        }
+      ],
       "relations": []
     }
   ],
-  "lastEntityId": "6:1280388070122766520",
-  "lastIndexId": "3:164845954998742339",
+  "lastEntityId": "7:2841487898884058921",
+  "lastIndexId": "4:8135378176765199035",
   "lastRelationId": "1:3222512674289628869",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
   "retiredEntityUids": [
-    1297057514913428450
+    1297057514913428450,
+    1280388070122766520
   ],
   "retiredIndexUids": [],
   "retiredPropertyUids": [
@@ -175,8 +189,12 @@
     882714518465779714,
     8791562267283690314,
     6915312791187177532,
-    684236504178639334
+    684236504178639334,
+    8200692962966355897,
+    5164015785348963543
   ],
-  "retiredRelationUids": [],
+  "retiredRelationUids": [
+    3222512674289628869
+  ],
   "version": 1
 }

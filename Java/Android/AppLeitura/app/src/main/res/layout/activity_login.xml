@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#26AE90"
-    tools:context="com.antonio.appleitura.Login">
+    tools:context="com.antonio.appleitura.ActivityLogin">
 
     <ImageView
         android:layout_width="wrap_content"

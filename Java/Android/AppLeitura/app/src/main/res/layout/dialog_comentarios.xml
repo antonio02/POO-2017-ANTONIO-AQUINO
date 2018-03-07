@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:theme="@style/Theme.AppCompat.Light">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_comentarios_meus_comentarios"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:background="#F0F0F0"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_dialog_comentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:theme="@style/AppFragmentTheme"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/dialog_cometarios_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_margin="10dp"
+            android:src="@drawable/fab_sair"/>
+
+    </FrameLayout>
+
+</LinearLayout>

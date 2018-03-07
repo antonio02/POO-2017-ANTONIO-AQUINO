@@ -11,6 +11,7 @@ import android.widget.PopupMenu;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.antonio.appleitura.ActivityCapitulos;
 import com.antonio.appleitura.FormularioLivro;
 import com.antonio.appleitura.R;
 import java.util.ArrayList;
@@ -19,9 +20,9 @@ import java.util.Locale;
 import io.objectbox.Box;
 import modelos.Livro;
 import modelos.Usuario;
-import utils.LivroDetalhesDialog;
+import utils.DialogLivroDetalhes;
 
-public class LivroRvAdapter extends RecyclerView.Adapter<LivroRvAdapter.ViewHolder> implements Usuario.OnUserChangeListener{
+public class RvAdapterLivros extends RecyclerView.Adapter<RvAdapterLivros.ViewHolder> implements Usuario.OnUserChangeListener{
 
     private List<Livro> livros = new ArrayList<>();
     private Box<Usuario> usuarios;
@@ -49,7 +50,7 @@ public class LivroRvAdapter extends RecyclerView.Adapter<LivroRvAdapter.ViewHold
         }
     }
 
-    public LivroRvAdapter(Box<Usuario> usuarios, long userid, String tipo, FragmentManager fragManager) {
+    public RvAdapterLivros(Box<Usuario> usuarios, long userid, String tipo, FragmentManager fragManager) {
         this.usuarios = usuarios;
         this.userid = userid;
         this.tipo = tipo;
@@ -59,13 +60,13 @@ public class LivroRvAdapter extends RecyclerView.Adapter<LivroRvAdapter.ViewHold
     }
 
     @Override
-    public LivroRvAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_card_view, parent, false);
+    public RvAdapterLivros.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_cv_livro, parent, false);
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(LivroRvAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(RvAdapterLivros.ViewHolder holder, int position) {
         Livro livro = livros.get(position);
         holder.nomeLivro.setText(livro.getNome());
         holder.autorLivro.setText(livro.getAutor());
@@ -91,6 +92,11 @@ public class LivroRvAdapter extends RecyclerView.Adapter<LivroRvAdapter.ViewHold
     }
 
     private void setupClicks(View itemView, Livro livro, int pos) {
+        itemView.setOnClickListener(view -> {
+            Intent itCap = new Intent(view.getContext(), ActivityCapitulos.class);
+            itCap.putExtra("idLivro", livros.get(pos).getId());
+            view.getContext().startActivity(itCap);
+        });
         itemView.setOnLongClickListener(view -> {
             PopupMenu popup = new PopupMenu(view.getContext(), view);
             popup.inflate(R.menu.cv_livro_options);
@@ -99,7 +105,7 @@ public class LivroRvAdapter extends RecyclerView.Adapter<LivroRvAdapter.ViewHold
             popup.setOnMenuItemClickListener(menuItem -> {
                 switch (menuItem.getItemId()){
                     case R.id.menu_cv_livro_option_detalhes:
-                        LivroDetalhesDialog detalhes = LivroDetalhesDialog.newInstance(
+                        DialogLivroDetalhes detalhes = DialogLivroDetalhes.newInstance(
                                 livro.getDataInicio()==null? "---":livro.getDataInicio(),
                                 livro.getDataTermino()==null? "---":livro.getDataTermino(),
                                 livro.getAvaliacao().equals("")? "Não avaliado":livro.getAvaliacao()
@@ -108,10 +114,20 @@ public class LivroRvAdapter extends RecyclerView.Adapter<LivroRvAdapter.ViewHold
                         detalhes.show(fragManager,"");
                         break;
                     case R.id.menu_cv_livro_option_editar:
-                        Intent it = new Intent(itemView.getContext(), FormularioLivro.class);
+                        Intent it = new Intent(view.getContext(), FormularioLivro.class);
                         it.putExtra("livroId", livro.getId());
                         it.putExtra("userid", userid);
-                        itemView.getContext().startActivity(it);
+                        view.getContext().startActivity(it);
+                        break;
+                    case R.id.menu_cv_livro_option_excluir:
+                        Livro l = livros.get(pos);
+                        Usuario user = usuarios.get(userid);
+                        user.livros.removeById(l.getId());
+                        usuarios.put(user);
+                        livros.remove(pos);
+                        notifyItemRemoved(pos);
+                        notifyDataSetChanged();
+                        break;
                 }
                 return true;
             });

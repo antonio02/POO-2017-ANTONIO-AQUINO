@@ -12,13 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.NumberPicker;
 
-import adapters.LivroFragAdapter;
+import adapters.FragAdapterLivro;
 import io.objectbox.Box;
 import modelos.App;
 import modelos.Logavel;
 import modelos.Usuario;
 
-public class Inicio extends AppCompatActivity implements NumberPicker.OnValueChangeListener{
+public class ActivityInicio extends AppCompatActivity implements NumberPicker.OnValueChangeListener{
 
     Box<Logavel> logado;
     Box<Usuario> usuarios;
@@ -46,12 +46,12 @@ public class Inicio extends AppCompatActivity implements NumberPicker.OnValueCha
         setSupportActionBar(toolbar);
         tabs = findViewById(R.id.inicio_tablayout);
         viewPager = findViewById(R.id.inicio_viewpager);
-        LivroFragAdapter adapter = new LivroFragAdapter(getSupportFragmentManager());
+        FragAdapterLivro adapter = new FragAdapterLivro(getSupportFragmentManager());
         adapter.addTab("Todos");
         adapter.addTab("Lidos");
         adapter.addTab("Lendo");
-        adapter.addTab("Desejos");
-        adapter.addTab("Desistidos");
+        adapter.addTab("Desejo");
+        adapter.addTab("Desisti");
         viewPager.setAdapter(adapter);
         tabs.setupWithViewPager(viewPager);
     }
@@ -66,18 +66,16 @@ public class Inicio extends AppCompatActivity implements NumberPicker.OnValueCha
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.menu_actionbar_novoLivro:
-                Intent it = new Intent(this, FormularioLivro.class);
-                it.putExtra("userid", userId);
-                startActivity(it);
-                break;
+            case R.id.menu_actionbar_logout:
+                logado.removeAll();
+                Usuario user = usuarios.get(userId);
+                user.setKeeplogado(false);
+                usuarios.put(user);
+                Intent itLogin = new Intent(this, ActivityLogin.class);
+                startActivity(itLogin);
+                finish();
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
     }
 
     @Override
@@ -88,17 +86,6 @@ public class Inicio extends AppCompatActivity implements NumberPicker.OnValueCha
         super.onDestroy();
     }
 
-    public void deslogar(View view) {
-        logado.removeAll();
-        Usuario user = usuarios.get(userId);
-
-        user.setKeeplogado(false);
-        usuarios.put(user);
-        Intent it = new Intent(this, Login.class);
-        startActivity(it);
-        finish();
-    }
-
     @Override
     public void onValueChange(NumberPicker numberPicker, int i, int i1) {
 
@@ -106,5 +93,11 @@ public class Inicio extends AppCompatActivity implements NumberPicker.OnValueCha
 
     public long getUserId(){
         return userId;
+    }
+
+    public void novoLivro(View view) {
+        Intent it = new Intent(this, FormularioLivro.class);
+        it.putExtra("userid", userId);
+        startActivity(it);
     }
 }

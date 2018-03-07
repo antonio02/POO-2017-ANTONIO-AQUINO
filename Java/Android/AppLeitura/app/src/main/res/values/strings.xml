@@ -9,7 +9,7 @@
     <string name="cadastro_edtxt_nome">Nome</string>
     <string name="cadastro_edtxt_confirme_senha">Confirme a senha</string>
     <string name="cadastro_edtxt_data_nascimento">Data de nascimento</string>
-    <string name="cadastro_btn_cadastrar">Finalizar</string>
+    <string name="cadastro_btn_finalizar">Finalizar</string>
     <string name="cadastro_btn_cancelar">Cancelar</string>
     <string name="cadastro_error_txtStatus_espaco_senha">Sem espaços na senha</string>
     <string name="cadastro_error_txtStatus_senha_grande">Senha muito grande</string>
@@ -41,7 +41,30 @@
     <string name="livroform_txt_paginas">Páginas</string>
     <string name="livroform_edtxt_paginasLidas">Lidas</string>
     <string name="livroform_edtxt_paginasTotal">Total</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="popup_capitulo_editar">Editar</string>
+    <string name="popup_capitulo_excluir">Excluir</string>
+    <string name="popup_comentario_addComentario">Adicionar Comentario</string>
+    <string name="popup_comentario_excluir">Excluir</string>
+    <string name="livro_nome_grande">Nome do livro muito grande</string>
+    <string name="livro_leitura_nao_iniciada">Você ainda não iniciou a leitura</string>
+    <string name="livro_jaLido">Você já leu este livro</string>
+    <string name="livro_paginas_vazio">Total de paginas vazio</string>
+    <string name="error_livro_jaExiste">Já existe um livro com o mesmo nome</string>
+    <string name="erro_livro_nome_curto">Nome do livro muito curto ou vazio</string>
+    <string name="erro_livro_autor_curto">Nome do autor muito curto ou vazio</string>
+    <string name="erro_livro_ano_vazio">Ano de publicação não pode ficar vazio</string>
+    <string name="erro_livro_status_vazio">Status da leitura não pode ficar vazio</string>
+    <string name="erro_livro_paginas_total_vazio">Total de páginas não pode ficar vazio</string>
+    <string name="imagem_app">imagem app</string>
+    <string name="dialog_comentarios_meus_comentarios">Meus comentarios</string>
+    <string name="dialog_nome_capitulo">Nome</string>
+    <string name="dialog_novo_comentario">Novo comentario</string>
+    <string name="dialog_hint_digite_seu_comentario">Digite seu comentario…</string>
+    <string name="dialog_number_menos_100">-100</string>
+    <string name="dialog_number_mais_100">+100</string>
+    <string name="menu_log_out">Log Out</string>
+    <string name="menu_editar">Editar</string>
+    <string name="menu_detalhes">Detalhes</string>
+    <string name="menu_excluir">Excluir</string>
 </resources>

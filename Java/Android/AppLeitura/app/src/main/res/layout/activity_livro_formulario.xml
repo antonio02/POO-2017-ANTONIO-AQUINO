@@ -352,7 +352,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="55dp"
-            android:text="@string/cadastro_btn_cadastrar"
+            android:text="@string/cadastro_btn_finalizar"
             android:layout_marginStart="3dp"
             android:backgroundTint="#D6D7D7"
             android:textColor="#26AE90"
