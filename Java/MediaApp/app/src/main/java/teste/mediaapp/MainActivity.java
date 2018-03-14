@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.io.Serializable;
+
+import model.Bimestre;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText usuario;
@@ -21,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void entrar(View view) {
         Intent it = new Intent(this, Tela2.class);
-        it.putExtra("usuario", usuario.getText().toString().trim());
+        Bimestre b = new Bimestre(usuario.getText().toString().trim());
+        it.putExtra("bimestre", (Serializable) b);
         startActivity(it);
         finish();
     }

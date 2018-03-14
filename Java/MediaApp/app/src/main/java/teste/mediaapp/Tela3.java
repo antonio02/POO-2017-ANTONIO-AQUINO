@@ -5,10 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import model.Bimestre;
+
 public class Tela3 extends AppCompatActivity {
 
-    private double nota1;
-    private double nota2;
+    private Bimestre usuario;
     private EditText edtxtPeso1;
     private EditText edtxtPeso2;
 
@@ -16,8 +17,7 @@ public class Tela3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela3);
-        nota1 = getIntent().getDoubleExtra("nota1", 0);
-        nota2 = getIntent().getDoubleExtra("nota2", 0);
+        usuario = (Bimestre) getIntent().getSerializableExtra("bimestre");
         edtxtPeso1 = findViewById(R.id.tela3_edtxt_peso1);
         edtxtPeso2 = findViewById(R.id.tela3_edtxt_peso2);
     }
@@ -25,8 +25,7 @@ public class Tela3 extends AppCompatActivity {
     public void calcular(View view) {
         int peso1 = Integer.valueOf(edtxtPeso1.getText().toString().trim());
         int peso2 = Integer.valueOf(edtxtPeso2.getText().toString().trim());
-        double media = ((nota1*peso1)+(nota2*peso2))/(peso1 + peso2);
-        getIntent().putExtra("media", media);
+        getIntent().putExtra("media", usuario.calcularMedia(peso1,peso2));
         setResult(RESULT_OK,getIntent());
         finish();
     }
