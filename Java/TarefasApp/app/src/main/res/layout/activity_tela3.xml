@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="usuario.app.tarefasapp.Tela3"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome Tarefa"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/tela3_edtxt_nome_tarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome da tarefa"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/tela3_edtxt_descricao_tarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição da tarefa"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data limite"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/tela3_edtxt_data_tarefa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data limite da tarefa"
+        android:focusable="false"
+        android:onClick="setData"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/tela3_edtxt_status_tarefas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Status da tarefa"
+        android:focusable="false"
+        android:onClick="setStatus"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="cancelar"
+            android:onClick="cancelar"/>
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="finalizar"
+            android:onClick="finalizar"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
