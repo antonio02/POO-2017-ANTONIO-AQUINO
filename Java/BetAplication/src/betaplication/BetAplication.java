@@ -6,9 +6,10 @@ import model.Aposta;
 import model.Bilhete;
 import model.Campeonato;
 import model.Jogo;
+import model.Premiacao;
 import model.Rodada;
 import model.Time;
-
+/*
 public class BetAplication {
     static Scanner entrada = new Scanner(System.in);
 
@@ -24,7 +25,9 @@ public class BetAplication {
         Rodada rodada = new Rodada();
         rodada.campeonatos.add(camp);
         rodada.campeonatos.add(camp2);
+        Premiacao premiacao = new Premiacao();
         Bilhete bilhete = new Bilhete();
+        premiacao.addBilhete(bilhete);
         
         int opcao = -1;
         while (true) {
@@ -111,3 +114,4 @@ public class BetAplication {
         return null;
     }
 }
+*/

@@ -9,11 +9,32 @@ public class Jogo {
     private Time timeCasa;
     private Time timeFora;
     private boolean finalizado;
+    private double arrecadacao;
+    private int vencedores;
 
     public Jogo(Time timeCasa, Time timeFora) {
         this.timeCasa = timeCasa;
         this.timeFora = timeFora;
+        this.arrecadacao = 0;
     }
+
+    public double getArrecadacao() {
+        return arrecadacao;
+    }
+    
+    public void addDinheiro(){
+        this.arrecadacao += 1; // 1/5 valor do bilhete
+    }
+    
+    public void addVencendor(){
+        this.vencedores += 1;
+    }
+
+    public int getVencedores() {
+        return vencedores;
+    }
+    
+    
     
     public Time getTimeCasa() {
         return timeCasa;

@@ -9,6 +9,7 @@ public class Aposta {
     public Aposta(Jogo jogo, int palpite) {
         this.jogo = jogo;
         this.palpite = palpite;
+        this.jogo.addDinheiro();
     }
 
     public Jogo getJogo() {
