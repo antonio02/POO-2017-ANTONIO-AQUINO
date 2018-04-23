@@ -9,10 +9,12 @@ public class Bilhete {
     private String nome;
     public List<Aposta> apostas = new ArrayList<>();
     private double valorGanho;
+    private boolean preenchido;
 
     public Bilhete(String nome) {
         this.nome = nome;
         this.valorGanho = 0;
+        this.preenchido = false;
     }
     
     public void addValor(double valor){
@@ -29,6 +31,14 @@ public class Bilhete {
             aposta.getJogo().addVencendor();
         }
         return true;
+    }
+
+    public boolean isPreenchido() {
+        return preenchido;
+    }
+
+    public void setPreenchido(boolean preenchido) {
+        this.preenchido = preenchido;
     }
     
     @Override

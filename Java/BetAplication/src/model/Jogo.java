@@ -16,6 +16,8 @@ public class Jogo {
         this.timeCasa = timeCasa;
         this.timeFora = timeFora;
         this.arrecadacao = 0;
+        this.vencedores = 0;
+        this.finalizado = false;
     }
 
     public double getArrecadacao() {
@@ -70,7 +72,7 @@ public class Jogo {
         } else {
             result = "Empate";
         }
-        return String.format(Locale.getDefault(), "%s X %s / %s", 
+        return String.format(Locale.getDefault(), "%s(Casa) X %s(Fora) / %s", 
                 timeCasa.getSigla(), timeFora.getSigla(), result);
     }
 }

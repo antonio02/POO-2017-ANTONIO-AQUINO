@@ -17,7 +17,7 @@ public class Rodada {
     public void finalizarRodada(){
         campeonatos.forEach((c) -> {
             c.jogos.forEach((j) -> {
-                j.finalizarJogo(new Random().nextInt(3)-1);
+                j.finalizarJogo(0);
             });
         });
         this.finalizada = true;

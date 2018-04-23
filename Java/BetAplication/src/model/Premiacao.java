@@ -13,9 +13,9 @@ public class Premiacao {
     }
     
     public void calcularVencendor(){
-        for (Bilhete bilhete : bilhetes) {
-            if(!bilhete.verificar()){
-                bilhetes.remove(bilhete);
+        for (int i = 0; i < bilhetes.size(); i++) {
+            if(!bilhetes.get(i).verificar()){
+                bilhetes.remove(i);
             }
         }
         
