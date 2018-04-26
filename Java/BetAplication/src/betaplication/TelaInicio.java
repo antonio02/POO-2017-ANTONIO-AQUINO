@@ -190,7 +190,7 @@ public class TelaInicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         rodada.finalizarRodada();
         premiacao.calcularVencendor();
-        String texto = "";
+        String texto = "Vencedores: \n\n";
         for (String s : premiacao.retornarVencendores()) {
             texto += s + "\n";
         }

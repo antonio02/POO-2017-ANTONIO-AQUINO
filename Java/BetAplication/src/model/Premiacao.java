@@ -16,6 +16,7 @@ public class Premiacao {
         for (int i = 0; i < bilhetes.size(); i++) {
             if(!bilhetes.get(i).verificar()){
                 bilhetes.remove(i);
+                i--;
             }
         }
         
